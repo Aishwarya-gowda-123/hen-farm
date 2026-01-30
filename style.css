@@ -70,18 +70,17 @@ nav a:hover {
 
 /* Section card style (for all pages except welcome) */
 section {
-  background: rgba(255, 255, 255, 0.9);
-  margin: 40px auto;
-  width: 85%;
-  border-radius: 12px;
-  padding: 20px 20px; /* reduce padding */
+  background-image: url("images/tour.jpg");
+  background-size: cover;             /* fills section, may crop edges */
+  background-position: center bottom; /* image aligned to bottom */
+  background-repeat: no-repeat;
+  min-height: 100vh;                  /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;          /* content at bottom */
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-
-  display: block; /* remove flex if you don’t need vertical alignment */
-  min-height: auto; /* let it shrink to content height */
+  padding: 20px;
 }
-
 
 /* Make welcome page section transparent so background shows */
 .welcome-bg section {
@@ -141,25 +140,10 @@ footer {
 
 /* Base styling for background */
 /* Remove background from body */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
+
 
 /* Apply background only to the section */
-section {
-  background-image: url("images/tour.jpg");
-  background-size: cover;             /* fills section, may crop edges */
-  background-position: center bottom; /* image aligned to bottom */
-  background-repeat: no-repeat;
-  min-height: 100vh;                  /* full viewport height */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;          /* content at bottom */
-  text-align: center;
-  padding: 20px;
-}
+
 
 /* Responsive styling for mobile */
 @media (max-width: 768px) {
