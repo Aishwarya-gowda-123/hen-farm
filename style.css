@@ -1,0 +1,152 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Base body styling */
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #2d2d2d;
+  
+}
+
+/* Background images for each page */
+.welcome-bg {
+  background-image: url("images/welcome.jpg");
+}
+
+.home-bg {
+  background-image: url("images/home.jpg");
+}
+
+.about-bg {
+  background-image: url("images/about.jpg");
+ 
+}
+
+.tour-bg {
+  background-image: url("images/tour.jpg");
+ 
+ 
+}
+
+.contact-bg {
+  background-image: url("images/contact.jpg");
+}
+
+/* Header */
+header {
+  background: rgba(255, 183, 3, 0.95);
+  padding: 15px;
+  text-align: center;
+  background-position: center bottom;
+}
+
+header h1 {
+  color: #5a3e1b;
+}
+
+/* Navigation */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #5a3e1b;
+}
+
+/* Section card style (for all pages except welcome) */
+section {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 40px auto;
+  width: 85%;
+  border-radius: 12px;
+  padding: 20px 20px; /* reduce padding */
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+  display: block; /* remove flex if you don’t need vertical alignment */
+  min-height: auto; /* let it shrink to content height */
+}
+
+
+/* Make welcome page section transparent so background shows */
+.welcome-bg section {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Welcome layout */
+.welcome {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Welcome image */
+.welcome-img {
+  width: 200px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #e76f51;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #d62828;
+  transform: scale(1.05);
+}
+
+/* Footer styling */
+footer {
+  width: 100%;
+  background-color: #6b4f2d; /* your brown color */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  
+  /* These make it stick at the bottom */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section {
+    width: 95%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* pushes content to the bottom */
+    text-align: center;
+  }
+}
