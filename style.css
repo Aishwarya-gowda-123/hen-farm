@@ -11,8 +11,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center bottom; /* make all images show from bottom */
   color: #2d2d2d;
+  
 }
 
 /* Background images for each page */
@@ -25,11 +25,14 @@ body {
 }
 
 .about-bg {
-  background-image: url("images/about1.JPG");
+  background-image: url("images/about.jpg");
+ 
 }
 
 .tour-bg {
   background-image: url("images/tour.jpg");
+ 
+ 
 }
 
 .contact-bg {
@@ -68,14 +71,17 @@ nav a:hover {
 /* Section card style (for all pages except welcome) */
 section {
   background: rgba(255, 255, 255, 0.9);
-  margin: 20px auto; /* smaller margin */
-  width: 80%; /* slightly smaller width */
+  margin: 40px auto;
+  width: 85%;
   border-radius: 12px;
-  padding: 15px 20px; /* reduced padding */
+  padding: 20px 20px; /* reduce padding */
   text-align: center;
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  min-height: auto; /* shrink to content */
+
+  display: block; /* remove flex if you don’t need vertical alignment */
+  min-height: auto; /* let it shrink to content height */
 }
+
 
 /* Make welcome page section transparent so background shows */
 .welcome-bg section {
@@ -88,9 +94,8 @@ section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* push content to bottom */
+  justify-content: center;
   align-items: center;
-  padding-bottom: 50px; /* adjust how far from bottom */
 }
 
 /* Welcome image */
@@ -122,33 +127,26 @@ section {
 /* Footer styling */
 footer {
   width: 100%;
-  background-color: #6b4f2d; /* brown color */
+  background-color: #6b4f2d; /* your brown color */
   color: white;
   text-align: center;
   padding: 10px 0;
+  
+  /* These make it stick at the bottom */
   position: fixed;
   bottom: 0;
   left: 0;
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
   section {
     width: 95%;
-    padding: 15px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* pushes content to the bottom */
     text-align: center;
-    margin: 10px auto; /* smaller margins on mobile */
-  }
-
-  .welcome {
-    padding-bottom: 30px; /* adjust spacing on mobile */
-  }
-
-  .welcome-img {
-    width: 150px; /* smaller image on mobile */
-    margin: 10px 0;
   }
 }
