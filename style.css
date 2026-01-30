@@ -139,14 +139,29 @@ footer {
 }
 
 
-/* Responsive Design */
+/* Base styling for background */
+body, section {
+  background-image: url("images/tour.jpg");
+  background-size: cover;      /* cover fills the area, might crop */
+  background-repeat: no-repeat;
+  background-position: center bottom; /* aligns image to bottom */
+  min-height: 100vh;           /* ensures it takes full viewport height */
+}
+
+/* Responsive styling for mobile */
 @media (max-width: 768px) {
   section {
     width: 95%;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* pushes content to the bottom */
+    justify-content: flex-end; /* content at bottom */
     text-align: center;
+
+    /* Make background fit fully without cropping */
+    background-size: contain;   /* fits entire image in section */
+    background-position: center bottom;
+    background-repeat: no-repeat;
   }
 }
+
