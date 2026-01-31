@@ -26,10 +26,11 @@ body {
 
 .about-bg {
   background-image: url("images/about.jpg");
-  background-size: 100% 400px;   /* width height */
+  background-size: cover;        /* fills area nicely */
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: center top;
 }
+
 
 .tour-bg {
   background-image: url("images/tour.jpg");
